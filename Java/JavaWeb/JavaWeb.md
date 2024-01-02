@@ -30,7 +30,7 @@ bin目录：
 
 主要是用来存放tomcat的命令，主要有两大类，一类是以.sh结尾的（linux命令），另一类是以.bat结尾的（windows命令）。很多环境变量的设置都在此处，例如可以设置JDK路径、tomcat路径，startup 用来启动tomcat，shutdown 用来关闭tomcat，修改catalina可以设置tomcat的内存。
 
-2.conf：
+conf目录：
 
 conf目录主要是用来存放tomcat的一些配置文件。server.xml可以设置端口号、设置域名或IP、默认加载的项目、请求编码web.xml可以设置tomcat支持的文件类型，context.xml可以用来配置数据源之类的，tomcat-users.xml用来配置管理tomcat的用户与权限，在Catalina目录下可以设置默认加载的项目。
 
@@ -42,15 +42,15 @@ logs目录：
 
 logs目录用来存放tomcat在运行过程中产生的日志文件，非常重要的是在控制台输出的日志。（清空不会对tomcat运行带来影响），在windows环境中，控制台的输出日志在catalina.xxxx-xx-xx.log文件中，在linux环境中，控制台的输出日志在catalina.out文件中。
 
-temp：
+temp目录：
 
 temp目录用户存放tomcat在运行过程中产生的临时文件。（清空不会对tomcat运行带来影响）。
 
-webapps：
+webapps目录：
 
 webapps目录用来存放应用程序，当tomcat启动时会去加载webapps目录下的应用程序。可以以文件夹、war包、jar包的形式发布应用。当然，你也可以把应用程序放置在磁盘的任意位置，在配置文件中映射好就行。
 
-work:
+work目录:
 
 work目录用来存放tomcat在运行时的编译后文件，例如JSP编译后的文件。清空work目录，然后重启tomcat，可以达到清除缓存的作用。~
 
@@ -388,6 +388,10 @@ public class UserServlet extends HttpServlet {
 那么是不是就只能在我们使用的时候执行初始化方法呢？其实也可以在我们启动项目的时候就先执行，这样用户在访问的时候可以提高一些访问的速度，具体的我们可以在.xml文件中配置loadOnStartup的值为一个正整数，因为这个字段的值默认是-1，配置之后就可以在启动的时候加载完成，当然也可以使用注解的方式进行配置，我们不建议将这个字段的值设置为10以内的数字，因为Tomcat存在默认的.xml文件，其中可能已经配置了对应的字段
 
 DefaultServlet，这是Tomcat提供的默认处理静态资源的Servlet，其实我们页面中的所有请求在Web项目中都是需要通过servlet方法去处理的，其中的静态资源就是利用上述的默认方法进行处理的。这个方法在讲解springMVC的时候还会详细解释.
+
+还要注意的一点是不建议在service方法中修改变量（使用共享变量），这会造成线程的不安全问题。
+
+## servlet继承结构
 
 
 
