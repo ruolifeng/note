@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="LeetcodeEditor">
+    <option name="projectConfig">
+      <map>
+        <entry key="$PROJECT_DIR$/LeetCode/src/leetcode/editor/cn/[1944]队列中可以看到的人数.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/LeetCode/src/leetcode/editor/cn/doc/content/[1944]队列中可以看到的人数.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1944" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/LeetCode/src/leetcode/editor/cn/[1944]队列中可以看到的人数.java" />
+              <option name="titleSlug" value="number-of-visible-people-in-a-queue" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

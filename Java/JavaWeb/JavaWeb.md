@@ -393,6 +393,249 @@ DefaultServlet，这是Tomcat提供的默认处理静态资源的Servlet，其�
 
 ## servlet继承结构
 
+## servlet的配置参数
+
+在开发web程序的时候.xml文件也给我们提供了很多配置可以供选择，我们在配置的时候可以直接在.xml文件中进行配置，同时也可以使用注释的方式进行配置，但是这些配置我们不是很常用，在后面学习过springMVC框架之后使用这些配置将会很方便
+
+## servletContext配置
+
+这是一个非常重要的配置，可以给我们的所有servlet提供配置参数，其中比较重要的配置主要有以下几个
+
+- getRealPath();//获取项目的真实路径，这个路径是项目部署在tomcat中的真实路径，不是我们在idea中书写的路径
+- getContextPath(); //获取项目的上下文路径就是我们在浏览器中输入的访问项目的名称，不是项目的文件夹名称
+
+上述两个配置在项目部署的时候都需要我们动态的进行获取，不能写死
+
+## 域对象
+
+在servlet中存在多个域对象，其中servletContext是最大的域对象，我们可以使用这个域对象从一个servlet传递数据给另外一个servlet
+
+- setAttribute
+- getAttribute
+
+## req对象获取请求中的头和行
+
+- getMethod(); //获取请求方式
+- getScheme(); //获取请求协议
+- getProtocol(); //获取请求的协议和版本
+- getRequestURI(); //获取请求的uri，url也称为统一资源标识符
+- getRequestURL(); //获取请求的url，url也称为统一资源定位符
+- getLocalPort(); //获取请求的本地容器的端口号
+- getRemotePort(); //获取远程服务器的端口号，在后续的学习中将会出现代理服务器的说法，在后续的学习中将会知道这个参数的用法
+- getHeader(); //获取请求头，当然获取的时候可以使用循环的方式取得所有的请求头
+
+## req对象获取请求参数
+
+## resp对象的相关API
+
+```java
+@WebServlet(name = "FirstServlet",urlPatterns = {"/hello"})
+public class FirstServlet extends HttpServlet {
+
+    @Override
+    /**
+     * 当请求方式为Post时，服务器会调用doPost方法
+     * Post方式提交的数据是私密的不可见的，同时可以携带大量的信息
+     * */
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException
+    {
+        /*不同的请求方式暂时不需要写不同的处理逻辑*/
+        doGet(request,response);
+    }
+
+    @Override
+    /**
+     * 当请求方式为Get时，服务器会调用doGet方法
+     * Get方式提交的数据是可以显示在地址栏中的
+     * 如当前的Servlet，在路径中提交的参数形式为：.../hello/?name=snake&age=18
+     * 即路径后以？作为分隔以key=value的键值对形式提交数据，多个键值对以&分隔
+     * 这种方式是有局限性的，在IE浏览器中地址栏的输入不超过2083个字节，Chrome就只有1023个字节
+     * */
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException
+    {
+        /*HttpServletRequest：接收服务器分配的前端提交的请求
+        * 一些获取Request中数据的相关的方法*/
+
+        /*请求中的属性以键值对的形式存在于Request域中，通过指定名称，即key
+        * 来获取对应value*/
+        Object o = request.getAttribute("");
+        /*获取请求中可用的key，这是一个枚举类*/
+        Enumeration<String> names = request.getAttributeNames();
+        /*判断类中是否有元素*/
+        while (names.hasMoreElements()){
+            /*取出下一个元素*/
+            String s = names.nextElement();
+            System.out.println(s);
+        }
+
+        /*获取请求中表单或AJAX提交过来的指定名称的参数*/
+        String name = request.getParameter("name");
+
+        /*获取请求中提交的指定名称参数的所有值*/
+        String[] ns = request.getParameterValues("name");
+
+        /*获取请求中提交的所有参数和对应值*/
+        Map<String,String[]> map = request.getParameterMap();
+
+        /*获取请求中提交的所有参数的名称*/
+        Enumeration<String> parameterNames = request.getParameterNames();
+
+        /*获取请求完整的路径*/
+        StringBuffer url = request.getRequestURL();
+
+        /*获取URL中资源名部分*/
+        String uri = request.getRequestURI();
+
+        /*返回客户机提交请求所发送的URL相关联的额外路径信息*/
+        String pathInfo = request.getPathInfo();
+
+        /*获取URL中的参数部分*/
+        String queryString = request.getQueryString();
+
+        /*获取请求中URI的上下文路径*/
+        String contextPath = request.getContextPath();
+
+        /*返回发送请求的客户机IP地址*/
+        String remoteAddr = request.getRemoteAddr();
+
+        /*返回发送请求的客户机的主机名*/
+        String host = request.getRemoteHost();
+
+        /*返回发送请求的客户机使用的网络端口号*/
+        int port = request.getRemotePort();
+
+        /*获得请求头中指定名称参数的值
+        请求头各个参数的含义：参考以下文章
+        https://blog.csdn.net/weixin_40516924/article/details/103418302
+        * */
+        String referer = request.getHeader("referer");
+
+        /*获取请求中数据使用字符集名称*/
+        String encoding = request.getCharacterEncoding();
+
+        /*获取本次请求中携带的所有Cookie*/
+        Cookie[] cookies = request.getCookies();
+
+        /*获取请求方式*/
+        String method = request.getMethod();
+
+        /*返回一个包含解码后的请求体数据的缓冲字符流*/
+        BufferedReader reader = request.getReader();
+
+        /*返回此请求依据的传输协议信息*/
+        String protocol = request.getProtocol();
+
+        /*返回请求映射到服务器后的路径信息*/
+        String pathTranslated = request.getPathTranslated();
+
+        /*返回调用此Servlet的URL部分*/
+        String servletPath = request.getServletPath();
+
+        /*返回接收此请求的服务器主机名称*/
+        String serverName = request.getServerName();
+
+        /*返回接收此请求的服务器主机端口号*/
+        int serverPort = request.getServerPort();
+
+        /*返回与此请求相关联的Session与对象，若没有会话并且为true则创建新的会话
+        * 无参默认为false*/
+        HttpSession session = request.getSession();
+
+        /*获取请求中上传的文件*/
+        Part part = request.getPart("fileName");
+        /*获取文件名*/
+        part.getName();
+        /*获取文件大小*/
+        part.getSize();
+        /*获取文件的输入流*/
+        part.getInputStream();
+        /*将文件信息保存到指定目录下的指定文件中*/
+        part.write("D:/a");
+        /*获取提交的所有文件*/
+        Collection<Part> collection = request.getParts();
+
+        /*设置请求域中数据使用的字符编码类型*/
+        request.setCharacterEncoding("UTF-8");
+
+        /*设置请求域中的属性，准确来说是添加键值对*/
+        request.setAttribute("key","value");
+
+
+
+        /*HttpServletResponse: 将请求处理完毕后,对浏览器做出的响应*/
+
+        /*一些常用的方法*/
+
+        /*获取此响应的HTTP状态码
+        * 对照表：https://tool.oschina.net/commons?type=5*/
+        int status = response.getStatus();
+
+        /*获取响应头中指定参数名称的值*/
+        String header = response.getHeader("Content-type");
+
+        /*获取响应的输出流*/
+        ServletOutputStream outputStream = response.getOutputStream();
+        /*提交响应，将流中现有数据写入到客户端*/
+        outputStream.flush();
+
+        /*获取一个输出流*/
+        PrintWriter writer = response.getWriter();
+        /*将指定内容写入客户端*/
+        writer.write("sss");
+
+        /*强制将缓冲区内容写入客户端，并提交响应*/
+        response.flushBuffer();
+
+        /*获取缓冲区大小*/
+        int bufferSize = response.getBufferSize();
+
+        /*获取此响应中发送数据使用的字符集*/
+        String characterEncoding = response.getCharacterEncoding();
+
+        /*返回此响应中发送的MIME主体的类型*/
+        String contentType = response.getContentType();
+
+        /*设置缓冲区大小，单位：B*/
+        response.setBufferSize(1024*1024*3);
+
+        /*设置此响应发送数据使用的字符集*/
+        response.setCharacterEncoding("UTF-8");
+
+        /*设置响应发送数据的类型,使客户端根据不同的数据类型调用浏览器不同的模块来处理
+        * 相应的数据，MIME类型对照表参考：https://blog.csdn.net/qq_42108192/article/details/81938674*/
+        response.setContentType("text/html;charset=utf-8");
+
+        /*设置响应头参数，如果该参数已经存在则将其原值覆盖*/
+        response.setHeader("Content-Type","text/html;charset=utf-8");
+
+        /*设置响应状态码*/
+        response.setStatus(200);
+
+        /*添加一个Cookie*/
+        response.addCookie(new Cookie("key","value"));
+
+        /*添加给定名称和值的响应头参数*/
+        response.addHeader("name","value");
+
+        /*判断响应头中是否包含指定名称的参数*/
+        boolean key = response.containsHeader("key");
+
+        /*请求转发，将此请求和响应交由其他Servlet处理，如果传递的路径是一个页面则直接跳转到此页面*/
+        request.getRequestDispatcher("/xx").forward(request,response);
+
+        /*重定向,此方法会跳转页面，但不会携带request和response*/
+        response.sendRedirect("/xx");
+
+    }
+
+
+}
+```
+
+## 请求转发和响应重定向
+
 
 
 ## 参考：

@@ -1,0 +1,13 @@
+<mxfile host="Electron" modified="2024-01-05T04:42:09.958Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="xhRZ5MrUwcjSAN8seu92" version="22.1.16" type="device">
+  <diagram name="Page-1" id="KUtqc2L22SS4XTfvzCSC">
+    <mxGraphModel dx="989" dy="577" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="CiYOnVtaVBvWh13FewnK-1" value="题目解析：如何才能判断一个元素是否能被看到，题目的意思是说，如果一个元素i能被看到，那么i和j之间的元素都应该小于两者，且i是这两者之间最大的那个元素。反之，如果逆序遍历数组中的元素如果存在一个元素小于左侧的元素那么他将永远不能被左侧的其他元素看到。&lt;br&gt;故使用逆序遍历的方式：&lt;br&gt;1.将元素逆序入栈&lt;br&gt;2.若入栈的元素是最后一个元素那么其右侧将没有元素被看到&lt;br&gt;3.若入栈的元素比栈底元素i小说明i是其左侧最大的一个元素，那么i左侧的元素都不会看到该元素，将该元素弹出&lt;br&gt;4.若入栈的元素比栈底元素i小，那么" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry y="120" width="780" height="260" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
