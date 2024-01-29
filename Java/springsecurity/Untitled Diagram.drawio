@@ -1,0 +1,213 @@
+<mxfile host="Electron" modified="2024-01-28T09:00:21.954Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="6f6rDPyVjDM-6oP4M6ki" version="22.1.16" type="device">
+  <diagram name="Page-1" id="FNaUNTNy62YjO9WJJHjf">
+    <mxGraphModel dx="2261" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" target="dCN_3PaNDqtulZIH1zfV-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="200" as="targetPoint" />
+            <mxPoint x="130" y="200" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-9" value="请求" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dCN_3PaNDqtulZIH1zfV-5">
+          <mxGeometry x="-0.92" y="-4" relative="1" as="geometry">
+            <mxPoint y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-1" value="UsernamePa&lt;br&gt;ssword&lt;br&gt;Authentication&lt;br&gt;Filter" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFE599;" vertex="1" parent="1">
+          <mxGeometry x="200" y="180" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-2" value="Exception&lt;br&gt;Translation&lt;br&gt;Filter" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#99FF99;" vertex="1" parent="1">
+          <mxGeometry x="334" y="180" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-3" value="FilterSecurity&lt;br&gt;Interceptor" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FF9999;" vertex="1" parent="1">
+          <mxGeometry x="470" y="180" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="dCN_3PaNDqtulZIH1zfV-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-10" value="响应" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dCN_3PaNDqtulZIH1zfV-6">
+          <mxGeometry x="0.9251" relative="1" as="geometry">
+            <mxPoint x="432" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-4" value="API" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#66FF66;" vertex="1" parent="1">
+          <mxGeometry x="610" y="180" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-11" value="springSecurity主要过滤器流程" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="140" y="130" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="dCN_3PaNDqtulZIH1zfV-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="239.9999999999999" y="290" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-16" value="&lt;font style=&quot;font-size: 6px;&quot;&gt;负责处理我们在&lt;br&gt;登录过程中输入用户名和密码之后的请求&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="175" y="293" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="373.7599999999999" y="290" as="sourcePoint" />
+            <mxPoint x="373.76" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-18" value="&lt;font style=&quot;font-size: 6px;&quot;&gt;负责处理过滤器链中抛出的任何异常&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="314" y="298" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="509.7599999999999" y="290" as="sourcePoint" />
+            <mxPoint x="509.76" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-20" value="&lt;font style=&quot;font-size: 6px;&quot;&gt;负责权限的校验和过滤&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="470" y="298" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-21" value="入门案例认证流程&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="360" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dCN_3PaNDqtulZIH1zfV-51">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="125" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-22" value="UsernamePasswordAuthenticationFilter" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#66FF66;" vertex="1" parent="1">
+          <mxGeometry x="10" y="410" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-23" value="ProviderManager" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFE599;" vertex="1" parent="1">
+          <mxGeometry x="290" y="410" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-24" value="DaoAuthentionProvider" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3399FF;" vertex="1" parent="1">
+          <mxGeometry x="550" y="410" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-25" value="InMemoryUserDetailsManger" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFFCC;" vertex="1" parent="1">
+          <mxGeometry x="800" y="410" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-30" value="接口的实现类" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-85" y="410" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dCN_3PaNDqtulZIH1zfV-56">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="405" y="800" as="targetPoint" />
+            <mxPoint x="405" y="440" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dCN_3PaNDqtulZIH1zfV-54">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="665" y="930" as="targetPoint" />
+            <mxPoint x="665" y="440" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="915" y="790" as="targetPoint" />
+            <mxPoint x="915" y="440" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="915" y="550" />
+              <mxPoint x="915" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.171;entryY=0.929;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="dCN_3PaNDqtulZIH1zfV-45" target="dCN_3PaNDqtulZIH1zfV-51">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="523" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-45" value="1.用户提交用户名和密码" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-85" y="520" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-47" value="2.封装Authentication对象&lt;br&gt;这个时候最多只有用户名和密码&lt;br&gt;权限还没有" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="140" y="460" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-53" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dCN_3PaNDqtulZIH1zfV-22" target="dCN_3PaNDqtulZIH1zfV-51">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="125" y="800" as="targetPoint" />
+            <mxPoint x="125" y="440" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="dCN_3PaNDqtulZIH1zfV-51" target="dCN_3PaNDqtulZIH1zfV-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-51" value="" style="rounded=0;whiteSpace=wrap;html=1;rotation=90;" vertex="1" parent="1">
+          <mxGeometry x="22.5" y="630" width="205" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-55" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" target="dCN_3PaNDqtulZIH1zfV-54">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="665" y="800" as="targetPoint" />
+            <mxPoint x="665" y="440" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dCN_3PaNDqtulZIH1zfV-54" target="dCN_3PaNDqtulZIH1zfV-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fillColor=#FF6666;strokeColor=#FF6666;" edge="1" parent="1" source="dCN_3PaNDqtulZIH1zfV-54" target="dCN_3PaNDqtulZIH1zfV-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-54" value="" style="rounded=0;whiteSpace=wrap;html=1;rotation=90;" vertex="1" parent="1">
+          <mxGeometry x="562.5" y="630" width="205" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-57" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" target="dCN_3PaNDqtulZIH1zfV-56">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="405" y="800" as="targetPoint" />
+            <mxPoint x="405" y="440" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="dCN_3PaNDqtulZIH1zfV-56" target="dCN_3PaNDqtulZIH1zfV-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-56" value="" style="rounded=0;whiteSpace=wrap;html=1;rotation=90;" vertex="1" parent="1">
+          <mxGeometry x="302.5" y="630" width="205" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;strokeColor=#FF6666;" edge="1" parent="1" source="dCN_3PaNDqtulZIH1zfV-59" target="dCN_3PaNDqtulZIH1zfV-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-59" value="" style="rounded=0;whiteSpace=wrap;html=1;rotation=90;" vertex="1" parent="1">
+          <mxGeometry x="812.5" y="630" width="205" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-60" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=0.276;exitY=-0.003;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="dCN_3PaNDqtulZIH1zfV-51" target="dCN_3PaNDqtulZIH1zfV-51">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="150" y="600" as="sourcePoint" />
+            <mxPoint x="190" y="550" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="190" y="600" />
+              <mxPoint x="140" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-62" value="3.调用authenticate&lt;br&gt;方法进行认证" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="200" y="600" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-64" value="4.调用DaoAuthentionProvider&lt;br&gt;的authenticate方法进行认证" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="450" y="600" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-65" value="5.调用loadUserByUsername&lt;br&gt;方法查询用户" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="695" y="600" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-66" value="5.1根据用户名去查询对应的用户以及这个用户&lt;br&gt;对应的权限信息，&lt;br&gt;security默认是在内存中进行查找" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="940" y="570" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-67" value="5.2吧对应的用户信息包括权限信息封装到&lt;br&gt;UserDetail对象中" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="970" y="635" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-70" value="6.返回UserDetail对象" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="710" y="655" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-72" value="7.通过PassswordEncoder&lt;br&gt;对比UserDetail中的密码和&lt;br&gt;Authentication的密码是否正确" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="690" y="705" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-73" value="8.如果正确就把userDetail对象中的&lt;br&gt;权限信息封装到Authentication对象中" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="675" y="775" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-76" value="9.返回Authentication对象" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="170" y="668" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dCN_3PaNDqtulZIH1zfV-77" value="10.如果上一步返回了Authentication对象就使用&lt;br&gt;SecurityContextHolder.getContext().setAuthentication()方法存储该对象的信息&lt;br&gt;，其他过滤器会通过SecurityContextHolder来获取当前用户信息" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="793" width="440" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
